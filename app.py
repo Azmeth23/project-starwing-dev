@@ -1,6 +1,7 @@
-from flask import Flask
-from datetime import datetime
 import socket
+from datetime import datetime, timezone
+
+from flask import Flask
 
 
 app = Flask(__name__)
@@ -11,7 +12,7 @@ def home():
     return {
         "status": "running heathyly",
         "version": "1.0",
-        "app": "DevOps Learning App"
+        "app": "DevOps Learning App",
     }
 
 
@@ -19,9 +20,9 @@ def home():
 def report():
     return {
         "service": "GCP Resource Reporter",
-        "generated_at": datetime.utcnow().isoformat(),
+        "generated_at": datetime.now(timezone.utc).isoformat(),
         "hostname": socket.gethostname(),
-        "status": "report generated"
+        "status": "report generated",
     }
 
 
@@ -29,5 +30,5 @@ if __name__ == "__main__":
     app.run(
         host="0.0.0.0",
         port=8080,
-        debug=True
+        debug=True,
     )

@@ -12,6 +12,7 @@ def test_health():
 
     assert data["status"] == "running heathyly"
     assert data["version"] == "1.0"
+    assert data["app"] == "DevOps Learning App"
 
 
 def test_report():
