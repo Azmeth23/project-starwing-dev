@@ -1,7 +1,7 @@
-from datetime import datetime, timezone
 import socket
-from flask import Flask
+from datetime import datetime, timezone
 
+from flask import Flask
 
 app = Flask(__name__)
 
