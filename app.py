@@ -1,6 +1,5 @@
-import socket
 from datetime import datetime, timezone
-
+import socket
 from flask import Flask
 
 
