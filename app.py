@@ -19,7 +19,7 @@ def home():
 def report():
     return {
         "service": "GCP Resource Reporter",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": datetime.now(UTC).isoformat(),
         "hostname": socket.gethostname(),
         "status": "report generated",
     }
