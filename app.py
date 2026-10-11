@@ -18,8 +18,8 @@ def home():
 @app.route("/report")
 def report():
     return {
-        "service": "GCP Resource Reporter",
-        "generated_at": datetime.now(UTC).isoformat(),
+        "service": "Resource Reporter",
+        "generated_at": datetime.now(timezone.utc).isoformat(),
         "hostname": socket.gethostname(),
         "status": "report generated",
     }
