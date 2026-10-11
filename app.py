@@ -1,5 +1,5 @@
 import socket
-from datetime import datetime, timezone
+from datetime import datetime, UTC
 
 from flask import Flask
 
@@ -19,7 +19,7 @@ def home():
 def report():
     return {
         "service": "Resource Reporter",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": datetime.now(UTC).isoformat(),
         "hostname": socket.gethostname(),
         "status": "report generated",
     }
