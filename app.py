@@ -1,5 +1,5 @@
 import socket
-from datetime import datetime, UTC
+from datetime import UTC, datetime
 
 from flask import Flask
 
