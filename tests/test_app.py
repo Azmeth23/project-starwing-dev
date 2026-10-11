@@ -24,5 +24,5 @@ def test_report():
 
     data = response.get_json()
 
-    assert data["service"] == "GCP Resource Reporter"
+    assert data["service"] == "Resource Reporter"
     assert data["status"] == "report generated"
